@@ -1,2 +1,17 @@
-package p2;public class PeopleAgeComparator {
+package p2;
+
+import java.util.Comparator;
+
+public class PeopleAgeComparator implements Comparator<People> {
+    @Override
+    public int compare(People o1, People o2) {
+
+        if (o1.getAge()> o2.getAge())
+            return 1;
+        else if (o1.getAge()< o2.getAge()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 }
